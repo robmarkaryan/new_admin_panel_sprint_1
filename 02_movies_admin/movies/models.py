@@ -29,6 +29,9 @@ class Genre(UUIDMixin, TimeStampedMixin):
         db_table = "content\".\"genre"
         verbose_name = _('genre')
         verbose_name_plural = _('genres')
+        indexes = [
+            models.Index(fields=['name'])
+        ]
 
     def __str__(self):
         return self.name
@@ -64,6 +67,9 @@ class Filmwork(UUIDMixin, TimeStampedMixin):
         db_table = "content\".\"film_work"
         verbose_name = _('film')
         verbose_name_plural = _('films')
+        indexes = [
+            models.Index(fields=['creation_date'])
+        ]
 
 
 class GenreFilmwork(UUIDMixin):
@@ -78,6 +84,10 @@ class GenreFilmwork(UUIDMixin):
         db_table = "content\".\"genre_film_work"
         verbose_name = _('fg')
         verbose_name_plural = _('fgs')
+        indexes = [
+            models.Index(fields=['genre_id']),
+            models.Index(fields=['film_work_id'])
+        ]
 
     def __str__(self):
         return 'жанр'
@@ -91,18 +101,26 @@ class Person(UUIDMixin, TimeStampedMixin):
         db_table = "content\".\"person"
         verbose_name = _('person')
         verbose_name_plural = _('people')
+        indexes = [
+            models.Index(fields=['full_name'])
+        ]
 
     def __str__(self):
         return self.full_name
 
 
 class PersonFilmwork(UUIDMixin):
+    class Roles(models.TextChoices):
+        Director = 'D', _('Director')
+        Writer = 'W', _('Writer')
+        Actor = 'A', _('Actor')
+
     film_work = models.ForeignKey('Filmwork', on_delete=models.CASCADE)
     person = models.ForeignKey(
         'Person',
         on_delete=models.CASCADE,
         verbose_name=_('FIO'))
-    role = models.TextField(_('role'))
+    role = models.TextField(_('role'), choices=Roles.choices)
     created = models.DateTimeField(auto_now_add=True)
 
     class Meta:

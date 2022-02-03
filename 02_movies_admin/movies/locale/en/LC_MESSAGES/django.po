@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-31 21:59+0300\n"
+"POT-Creation-Date: 2022-02-01 23:49+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,11 +26,11 @@ msgstr "Фильмы"
 msgid "name"
 msgstr "Название"
 
-#: .\models.py:26 .\models.py:48
+#: .\models.py:26 .\models.py:53
 msgid "description"
 msgstr "Описание"
 
-#: .\models.py:30 .\models.py:73
+#: .\models.py:30 .\models.py:80
 msgid "genre"
 msgstr ""
 
@@ -38,80 +38,92 @@ msgstr ""
 msgid "genres"
 msgstr ""
 
-#: .\models.py:41
+#: .\models.py:44
 msgid "Film"
 msgstr ""
 
-#: .\models.py:42
+#: .\models.py:45
 msgid "Show"
 msgstr ""
 
-#: .\models.py:45
+#: .\models.py:48
 msgid "title"
 msgstr "Название"
 
-#: .\models.py:46
+#: .\models.py:49
 msgid "certificate"
 msgstr ""
 
-#: .\models.py:47
+#: .\models.py:51
 msgid "file"
 msgstr ""
 
-#: .\models.py:49
+#: .\models.py:54
 msgid "creation_date"
 msgstr "Дата создания"
 
-#: .\models.py:51
+#: .\models.py:56
 msgid "rating"
 msgstr "Рэйтинг"
 
-#: .\models.py:54
+#: .\models.py:59
 msgid "type"
 msgstr "Тип"
 
-#: .\models.py:64
+#: .\models.py:68
 msgid "film"
 msgstr ""
 
-#: .\models.py:65
+#: .\models.py:69
 msgid "films"
 msgstr ""
 
-#: .\models.py:78
+#: .\models.py:85
 msgid "fg"
 msgstr ""
 
-#: .\models.py:79
+#: .\models.py:86
 msgid "fgs"
 msgstr ""
 
-#: .\models.py:86 .\models.py:103
+#: .\models.py:97 .\models.py:122
 msgid "FIO"
 msgstr ""
 
-#: .\models.py:87
+#: .\models.py:98
 #, fuzzy
 #| msgid "creation_date"
 msgid "birth_date"
 msgstr "Дата создания"
 
-#: .\models.py:91
+#: .\models.py:102
 msgid "person"
 msgstr ""
 
-#: .\models.py:92
+#: .\models.py:103
 msgid "people"
 msgstr ""
 
-#: .\models.py:104
+#: .\models.py:114
+msgid "Director"
+msgstr ""
+
+#: .\models.py:115
+msgid "Writer"
+msgstr ""
+
+#: .\models.py:116
+msgid "Actor"
+msgstr ""
+
+#: .\models.py:123
 msgid "role"
 msgstr "Роль"
 
-#: .\models.py:109
+#: .\models.py:128
 msgid "man in the film"
 msgstr ""
 
-#: .\models.py:110
+#: .\models.py:129
 msgid "men in the film"
 msgstr ""
