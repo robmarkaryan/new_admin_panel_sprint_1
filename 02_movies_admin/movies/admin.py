@@ -15,15 +15,19 @@ class PersonAdmin(admin.ModelAdmin):
 
 class GenreFilmworkInline(admin.TabularInline):
     model = GenreFilmwork
+    raw_id_fields = ['genre']
 
 
 class PersonFilmworkInline(admin.TabularInline):
     model = PersonFilmwork
+    raw_id_fields = ['person']
 
 
 @admin.register(Filmwork)
 class FilmworkAdmin(admin.ModelAdmin):
     inlines = (GenreFilmworkInline, PersonFilmworkInline,)
+
+
 
     # Отображение полей в списке
     list_display = ('title', 'type', 'creation_date', 'rating',)
